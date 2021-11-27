@@ -1,0 +1,7 @@
+{
+  "name": "fontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
