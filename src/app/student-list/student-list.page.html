@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>List All Student</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="dark">
+  <ion-button [routerLink]="['/student-create']" expand="block" color="primary">
+    Add student
+  </ion-button>
+  <ion-card *ngFor="let item of studentsData.data" color="secondary">
+    <ion-card-header>
+      <ion-card-title>{{ item.name }}</ion-card-title>
+      <ion-card-subtitle>{{ item.id }}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item color="secondary">
+        {{ item.address }}
+      </ion-item>
+      <ion-button color="warning" size="large" routerLink="/student-edit/{{item.id}}">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+      <ion-button color="danger" size="large" (click)="delete(item)">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Create Student</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="dark">
+  <ion-item color="secondary">
+    <!-- <ion-label>Name</ion-label> -->
+    <ion-input [(ngModel)]="data.name" placeholder="Enter Name"></ion-input>
+  </ion-item>
+  <ion-item color="secondary">
+    <!-- <ion-label>Address</ion-label> -->
+    <ion-textarea [(ngModel)]="data.address" placeholder="Enter Address"></ion-textarea>
+  </ion-item>
+    <ion-button (click)="submitForm()" expand="full" size="large">Add</ion-button>
+</ion-content>
